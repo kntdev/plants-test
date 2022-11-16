@@ -2,7 +2,9 @@ import {
   AiOutlineMenu,
   AiOutlineBarChart,
   AiFillCheckCircle,
-  AiOutlineDownCircle
+  AiOutlineDownCircle,
+  AiOutlineDoubleRight,
+  AiOutlineSetting
 
  } from "react-icons/ai";
 
@@ -23,7 +25,7 @@ function App() {
         <span className="text-sm pl-1">3</span>
       </div>
       <section className="flex gap-5 w-screen mb-8">
-        <div className="bg-green-500 w-40 h-48 rounded-2xl text-white pl-4 p-2 text-lg relative flex flex-col justify-between">
+        <div className="bg-green-500 min-w-[10.125rem] w-40 h-48 rounded-2xl text-white pl-4 p-2 text-lg relative flex flex-col justify-between">
           <AiFillCheckCircle/>
           <img src={logo} 
           className="absolute
@@ -37,7 +39,7 @@ function App() {
           <span className="uppercase text-sm tracking-tighter text-green-200">indoor</span>
           </div>
         </div>
-        <div className="bg-green-500 w-40 h-48 rounded-2xl text-white pl-4 p-2 text-lg relative flex flex-col justify-between">
+        <div className="bg-green-500 min-w-[10.125rem] w-40 h-48 rounded-2xl text-white pl-4 p-2 text-lg relative flex flex-col justify-between">
           <AiFillCheckCircle/>
           <img src={logo} 
           className="absolute
@@ -51,7 +53,7 @@ function App() {
           <span className="uppercase text-sm tracking-tighter text-green-200">indoor</span>
           </div>
         </div>
-        <div className="bg-green-500 w-40 h-48 rounded-2xl text-white pl-4 p-2 text-lg relative flex flex-col justify-between">
+        <div className="bg-green-500 min-w-[10.125rem] w-40 h-48 rounded-2xl text-white pl-4 p-2 text-lg relative flex flex-col justify-between">
           <AiFillCheckCircle/>
           <img src={logo} 
           className="absolute
@@ -60,7 +62,7 @@ function App() {
            -top-20
            -right-5"
           alt="Planta" />
-          <div className="font-bold leading-3">
+          <div className="font-bold">
           <h4 className="tracking-wide">Monstéra</h4>
           <span className="uppercase text-sm tracking-tighter text-green-200">indoor</span>
           </div>
@@ -73,7 +75,7 @@ function App() {
         <AiOutlineDownCircle className="text-3xl"/>
         </div>
         <section className="flex gap-5 w-screen mb-8">
-        <div className="bg-gray-200 w-40 h-48 rounded-2xl relative flex flex-col-reverse z-20">
+        <div className="bg-gray-200 min-w-[10.125rem] w-40 h-48 rounded-2xl relative flex flex-col-reverse z-20">
           <div className="w-full absolute m-auto -top-12 left-10">
               <div className="relative">
               <img src={item} 
@@ -82,13 +84,28 @@ function App() {
               <div className="w-20 h-20 rounded-full bg-[#3dc1269f] absolute bottom-2 left-0 -z-10"></div>
               </div>
           </div>
-          <div className="font-bold leading-3">
-          <h4 className="m-2 text-xl">Hola</h4>
+          <div className="font-bold p-2 px-4 flex flex-col">
+            <div className="text-xl relative">
+            <h4 className="leading-[1.5rem]">Gazonia</h4>
+            <small className="text-xs font-bold absolute top-0 right-8">$20</small>
+            </div>
+            <span className="uppercase text-sm tracking-tighter text-green-600">Indoor</span>
           </div>
           </div>
           </section>
       </section>
     </main>
+    <footer className="py-10 pb-20">
+      <section className="flex justify-around items-center">
+          <div className="flex items-baseline gap-4 font-bold">
+            <AiOutlineDoubleRight className="text-lg"/>
+            <h2 className="text-xl w-64">Adjust the watering of plants</h2>
+          </div>
+          <div className="text-white bg-green-500 p-8 rounded-full">
+            <AiOutlineSetting className="text-3xl"/>
+          </div>
+      </section>
+    </footer>
    </div>
   );
 }
