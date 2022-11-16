@@ -14,12 +14,22 @@ import {
 function App() {
   return (
    <div className="overflow-x-hidden">
-    <header className="flex items-center justify-between px-5 pt-10 pb-5 font-bold text-2xl mb-10 border">
-      <AiOutlineMenu/>
+    <header className="flex items-center justify-between px-5 pt-10 pb-5 font-bold text-2xl mb-10 border relative">
+      <AiOutlineMenu className="inline-block md:hidden"/>
+      <ul className="flex text-lg gap-6 text-green-400 fixed top-0 p-20 left-0 z-50 h-screen bg-green-200 flex-col md:static md:flex md:flex-row">
+        <li>Home</li>
+        <li>Forum</li>
+        <li>Settings</li>
+      </ul>
       <h1 className="text-green-600">Logo</h1>
-      <AiOutlineBarChart/>
+      <AiOutlineBarChart className="inline-block md:hidden"/>
+      <ul className="hidden text-lg gap-4 text-green-400 md:flex">
+        <li>Account</li>
+        <li>Stats</li>
+        <li>My inventory</li>
+      </ul>
     </header>
-    <main className="w-[90%] m-auto overflow-x-visible overflow-y-clip">
+    <main className="lg:w-[65%] w-[90%] m-auto overflow-x-visible overflow-y-clip">
       <div className="flex font-bold text-4xl mb-16">
         <h2>My plants</h2>
         <span className="text-sm pl-1">3</span>
